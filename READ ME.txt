@@ -1,0 +1,59 @@
+***Path = yolov5-env\Scripts\yolov5\cam.py where the main code is located
+
+This project uses a YOLOv5 (You Only Look Once) object detection model to identify whether construction workers are wearing safety helmets
+or not in real-time video streams.
+
+Real-World Applications in Industry
+This prototype was developed to provide AI-powered monitoring of safety gear that is mandatory in workplaces where there is a risk to human life.
+While still in a proof-of-concept stage, the system showcases how real-time helmet detection can contribute to:
+
+Construction Sites: Prototype functionality includes identifying workers without helmets in video streams,
+which could be extended to real-time alerting systems for on-site supervisors.
+
+Factories & Warehouses: The model could form the foundation for smart safety monitoring tools
+to ensure helmet compliance across various operational zones.
+
+Smart Surveillance Integration: The lightweight design and fast inference suggest feasibility for integration into
+CCTV systems or smart edge devices for automated PPE compliance reporting.
+
+Safety Auditing & Training: Detection data can be logged and used to generate basic reports, offering insights into common non-compliance trends,
+which could help improve workplace training programs.
+
+
+Choice of AI Framework and Algorithm
+Framework: Ultralytics YOLOv5 (based on PyTorch)
+
+Why YOLOv5?
+
+Real-time performance with high accuracy
+
+Lightweight and easy to deploy
+
+Supported by an active open-source community
+
+Pre-trained models and custom training support
+
+YOLOv5 was chosen because it provides an excellent trade-off between inference speed and detection accuracy,
+which is especially important for real-time safety monitoring in industrial environments.
+
+Datasets
+This model was trained using a public dataset containing images of construction workers with and without helmets.
+The dataset includes annotations for three classes: helmet, head, and person.
+
+epochs	10	Number of training iterations over the full dataset
+
+batch size	16	Number of images processed simultaneously (affects training time/memory)
+
+img size	640	Input image size (balances speed and accuracy)
+
+optimizer	SGD	Stochastic Gradient Descent for weight updates
+
+***The number of epochs is kept low to make it more time-efficient. However, for higher accuracy, a larger number would be more ideal.
+Epochs: More epochs generally lead to better accuracy as the model learns from the data longer. However, after a certain point, performance gains diminish or overfitting may occur.
+
+Batch Size: A larger batch size can speed up training with stable gradients, but requires more GPU memory. A smaller batch may lead to better generalization.
+
+Image Size: Higher resolution improves detection of small objects like helmets, but increases computational cost.
+
+Optimizer and Learning Rate: Fine-tuned to achieve the best balance between speed of convergence and model stability.
+
