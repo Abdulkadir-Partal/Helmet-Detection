@@ -2,4 +2,4 @@ train: safety_helmet/train/images
 val: safety_helmet/valid/images
 
 nc: 3
-names: ['head', 'helmet', 'person']  # Etiketlere göre isimleri sen doldurmalısın
+names: ["head", "helmet", "person"] # Etiketlere göre isimleri sen doldurmalısın
